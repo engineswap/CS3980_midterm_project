@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presidential Quote Maker</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="./frontend/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="./frontend/style.css"/>
+</head>
+<body>
+    <div class="eagle-container">
+        <img src="https://i.natgeofe.com/k/afe51970-80c6-46c3-b047-4c407c72d874/bald-eagle-closeup_4x3.jpg" class="eagle-image" alt="Eagle Image">
+    </div>
+    <div class="content">
+        <div class="container text-center" style="background-color: aqua; opacity: 0.8; padding: 10px; border-radius: 25px;">
+            <h1>Presidential Quote Maker</h1>
+            <div class="dropdown mt-3">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                    Choose
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item" href="#" data-value="Donald Trump">Donald Trump</a></li>
+                    <li><a class="dropdown-item" href="#" data-value="Joe Biden">Joe Biden</a></li>
+                </ul>
+            </div>
+            <p id="selected-item">Selected: None</p>
+            <input type="text" id="promptInput" class="form-control mt-3" placeholder="Enter starting text" style="text-align: center; width:50%; margin-left: 25%;">
+            <button onclick="generate()" class="btn btn-success mt-3">Generate</button>
+        </div>
+
+        <div class="container mt-5">
+            <table class="table table-bordered text-center table-dark" id="quotesTable">
+                <thead>
+                    <tr>
+                        <th>President</th>
+                        <th>Quote</th>
+                        <th>Action</th> 
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Quotes will be populated here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
